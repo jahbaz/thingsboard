@@ -77,12 +77,16 @@ public class NetworkReceive implements Receive {
         this.memoryPool = MemoryPool.NONE;
     }
 
-    public NetworkReceive(int maxSize, String source, MemoryPool memoryPool) {
+    public NetworkReceive(int maxSize, String source, MemoryPool memoryPool,String myName) {
         this.source = source;
+
+        
         this.size = ByteBuffer.allocate(4);
         this.buffer = null;
         this.maxSize = getMaxSize(maxSize);
         this.memoryPool = memoryPool;
+        this.myName
+        
     }
 
     public NetworkReceive() {
